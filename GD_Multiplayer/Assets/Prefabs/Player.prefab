@@ -213,6 +213,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4845691779347248609}
+  - {fileID: 1354973499029946234}
   m_Father: {fileID: 5857738480271492029}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2616888546698522868
@@ -261,6 +262,37 @@ MonoBehaviour:
   SwitchTransformSpaceWhenParented: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!1 &3384655132660019700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1354973499029946234}
+  m_Layer: 0
+  m_Name: Projectile Spawn Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1354973499029946234
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3384655132660019700}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5806691069168441409}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5689728123810007048
 GameObject:
   m_ObjectHideFlags: 0
@@ -461,6 +493,7 @@ GameObject:
   - component: {fileID: 8765814428929167685}
   - component: {fileID: 6827940388509218261}
   - component: {fileID: 3040130904798426127}
+  - component: {fileID: 7459589618587489293}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -617,3 +650,20 @@ MonoBehaviour:
   rotateTurretPolar: {fileID: -2458773085327801004, guid: ce29c8d6655d1244f8b8c0627153d565, type: 3}
   turretPivotTransform: {fileID: 5806691069168441409}
   rotateSpeed: 720
+--- !u!114 &7459589618587489293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7397113570812879623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc0bf3fab6efe242ae6692d96335dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClientFire
+  ShowTopMostFoldoutHeaderGroup: 1
+  fire: {fileID: -8006612934667262678, guid: ce29c8d6655d1244f8b8c0627153d565, type: 3}
+  projectileSpawnPoint: {fileID: 1354973499029946234}
+  serverProjectilePrefab: {fileID: 4993467555972536224, guid: cfaebfd121205b142a259c5fb03e8882, type: 3}
+  clientProjectilePrefab: {fileID: 1522335890752290863, guid: 69e7465cc7852d544a43aa174e33fc00, type: 3}
