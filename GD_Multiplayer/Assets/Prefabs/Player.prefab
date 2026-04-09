@@ -456,10 +456,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5857738480271492029}
+  - component: {fileID: 7106900125208815488}
   - component: {fileID: 7511399789559026252}
   - component: {fileID: 8765814428929167685}
   - component: {fileID: 6827940388509218261}
-  - component: {fileID: 7106900125208815488}
+  - component: {fileID: 3040130904798426127}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -484,6 +485,33 @@ Transform:
   - {fileID: 5806691069168441409}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!50 &7106900125208815488
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7397113570812879623}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0.1
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!114 &7511399789559026252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -569,36 +597,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClientMovement
   ShowTopMostFoldoutHeaderGroup: 1
   moveBody: {fileID: -1556040040123672409, guid: ce29c8d6655d1244f8b8c0627153d565, type: 3}
-  moveTurret: {fileID: -2458773085327801004, guid: ce29c8d6655d1244f8b8c0627153d565, type: 3}
   bodyTransform: {fileID: 8535915989525971082}
-  turretPivotTransform: {fileID: 5806691069168441409}
   clientRb: {fileID: 7106900125208815488}
   moveSpeed: 7
   turnRate: 720
---- !u!50 &7106900125208815488
-Rigidbody2D:
-  serializedVersion: 5
+--- !u!114 &3040130904798426127
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7397113570812879623}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0.1
-  m_AngularDamping: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1cda1026ca7e6e4ab0fd345f0ba7ec8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClientAiming
+  ShowTopMostFoldoutHeaderGroup: 1
+  rotateTurretPolar: {fileID: -2458773085327801004, guid: ce29c8d6655d1244f8b8c0627153d565, type: 3}
+  turretPivotTransform: {fileID: 5806691069168441409}
+  rotateSpeed: 720

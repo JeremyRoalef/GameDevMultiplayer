@@ -16,22 +16,13 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "RotateTurretCW",
-                    "type": "Button",
-                    "id": "fad6a37c-b52f-4297-b412-f080915247ed",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "RotateTurretCCW",
-                    "type": "Button",
+                    "name": "RotateTurret",
+                    "type": "Value",
                     "id": "ced6b170-0f9f-401d-9998-72bb952cf1bf",
-                    "expectedControlType": "",
+                    "expectedControlType": "Axis",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false
+                    "initialStateCheck": true
                 },
                 {
                     "name": "Fire",
@@ -101,28 +92,6 @@
                 },
                 {
                     "name": "",
-                    "id": "8a921f14-ec48-493d-aa2b-3841f1c62dbd",
-                    "path": "<Keyboard>/rightArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RotateTurretCW",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "27c0bda6-a526-4727-8c8f-2ce1743b3bc4",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RotateTurretCCW",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "077a66ed-f573-4cdf-9690-8158fa08d849",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -131,6 +100,39 @@
                     "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "LeftRightPolar",
+                    "id": "3b8f965d-2085-4465-9fb1-50ba3ee47188",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateTurret",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "e8318891-763a-465f-afe6-7f06f8a37653",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateTurret",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "1faeed61-b4bc-47b1-a556-1723e104258f",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RotateTurret",
+                    "isComposite": false,
+                    "isPartOfComposite": true
                 }
             ]
         }

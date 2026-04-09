@@ -9,15 +9,9 @@ public class ClientMovement : NetworkBehaviour
     [SerializeField]
     InputActionReference moveBody;
 
-    [SerializeField]
-    InputActionReference moveTurret;
-
     [Header("Prefab References")]
     [SerializeField]
     Transform bodyTransform;
-
-    [SerializeField]
-    Transform turretPivotTransform;
 
     [SerializeField]
     Rigidbody2D clientRb;
