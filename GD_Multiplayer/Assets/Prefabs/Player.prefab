@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2642159411563384232}
   - component: {fileID: 3600495765201048033}
   m_Layer: 0
-  m_Name: Tank Body
+  m_Name: Tank Body Overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -274,7 +274,7 @@ GameObject:
   - component: {fileID: 6761785331607250171}
   - component: {fileID: 942067887783062026}
   m_Layer: 0
-  m_Name: Tank Treads
+  m_Name: Tank Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -458,6 +458,8 @@ GameObject:
   - component: {fileID: 5857738480271492029}
   - component: {fileID: 7511399789559026252}
   - component: {fileID: 8765814428929167685}
+  - component: {fileID: 6827940388509218261}
+  - component: {fileID: 7106900125208815488}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -494,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5a57f767e5e46a458fc5d3c628d0cbb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Netcode.Runtime::Unity.Netcode.NetworkObject
-  GlobalObjectIdHash: 1563576644
+  GlobalObjectIdHash: 1748830805
   InScenePlacedSourceGlobalObjectIdHash: 0
   DeferredDespawnTick: 0
   Ownership: 1
@@ -553,3 +555,50 @@ MonoBehaviour:
   SwitchTransformSpaceWhenParented: 0
   Interpolate: 1
   SlerpPosition: 0
+--- !u!114 &6827940388509218261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7397113570812879623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16ffb72bb0f8e5c44ab1da51e301442c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ClientMovement
+  ShowTopMostFoldoutHeaderGroup: 1
+  moveBody: {fileID: -1556040040123672409, guid: ce29c8d6655d1244f8b8c0627153d565, type: 3}
+  moveTurret: {fileID: -2458773085327801004, guid: ce29c8d6655d1244f8b8c0627153d565, type: 3}
+  bodyTransform: {fileID: 8535915989525971082}
+  turretPivotTransform: {fileID: 5806691069168441409}
+  clientRb: {fileID: 7106900125208815488}
+  moveSpeed: 7
+  turnRate: 720
+--- !u!50 &7106900125208815488
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7397113570812879623}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0.1
+  m_AngularDamping: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
